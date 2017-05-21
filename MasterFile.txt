@@ -1,0 +1,40 @@
+; private zone master file used by stealth server(s)
+; provides public and private services and hosts
+$ORIGIN javeriana.edu.co     ; designates the start of this zone file in the namespace
+javeriana.edu.co  IN      SOA   www.javeriana.edu.co root.example.com. (
+                                2003080800 ; se = serial number
+                                3h         ; ref = refresh
+                                15m        ; ret = update retry
+                                3w         ; ex = expiry
+                                3h         ; min = minimum
+                                )
+                  IN      NS      ns1.example.com.
+                  IN      NS      ns2.example.com.
+                  IN      MX  10  mail.example.com.
+; hosts
+www               IN      A       192.168.254.1
+newton            IN      AAAA    192.168.254.2
+micorreo          IN      A       192.168.254.3
+sophia            IN      A       192.168.254.4
+portal2           IN      A       192.168.254.5
+uvirtual          IN      A       192.168.254.6
+
+$ORIGIN google.com.co     ; designates the start of this zone file in the namespace
+google.com.co  IN      SOA   www.google.com.co root.example.com. (
+                                2003080800 ; se = serial number
+                                3h         ; ref = refresh
+                                15m        ; ret = update retry
+                                3w         ; ex = expiry
+                                3h         ; min = minimum
+                                )
+                  IN      NS      ns1.example.com.
+                  IN      NS      ns2.example.com.
+                  IN      MX  10  mail.example.com.
+; hosts
+www               IN      A       192.168.254.7
+drive             IN      A       192.168.254.8
+youtube           IN      A       192.168.254.9
+gmail             IN      A       192.168.254.10
+maps              IN      A       192.168.254.11
+images            IN      A       192.168.254.12
+
